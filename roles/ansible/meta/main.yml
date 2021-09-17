@@ -1,0 +1,27 @@
+galaxy_info:
+  role_name: ansible
+  author: Jakob Meng
+  description: Install Ansible with support for collections and required tools and libraries e.g. for Ansible modules
+  company: Hochschule Bonn-Rhein-Sieg
+  license: license (GPLv3)
+
+  min_ansible_version: 2.9
+
+  platforms:
+  # Ref.: https://galaxy.ansible.com/api/v1/platforms/
+  - name: Debian
+    versions:
+    - buster
+    - bullseye
+    - bookworm
+
+  - name: Ubuntu
+    versions:
+    - bionic
+    - focal
+
+  galaxy_tags:
+  - development
+  - system
+
+dependencies: []

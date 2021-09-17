@@ -1,0 +1,50 @@
+---
+# Copyright (c) 2020-2021 Jakob Meng, <jakobmeng@web.de>
+# vim:set fileformat=unix tabstop=2 shiftwidth=2 expandtab:
+# kate: end-of-line unix; space-indent on; indent-width 2; remove-trailing-spaces modified;
+
+- name: Fetch apt repositories info for Debian Backports, i.e. apt_repositories_debian_10.buster_backports
+  import_role:
+    name: jm1.apt_repositories
+
+- name: Add apt repository of Debian Backports
+  ansible.builtin.apt_repository: '{{ apt_repositories_debian_10.buster_backports.deb }}'
+
+- name: Install Ansible
+  jm1.pkg.meta_pkg:
+    name: "jm1-packages-ansible"
+    version: "6"
+    depends:
+    - ansible # must be >= 2.9.0 but we cannot enforce it here because install from backports is done afterwards
+    # pip is required for Ansible's pip module
+    - python-pip
+    - python3-pip
+    # Python module netaddr is required for Ansible's ipaddr filter
+    - python-netaddr
+    - python3-netaddr
+    # Python module libvirt is required for Ansible's virt* modules
+    - python-libvirt
+    - python3-libvirt
+    # setfacl tool is used to set permissions on temporary files when becoming an unprivileged user
+    # Ref.: https://stackoverflow.com/questions/46352173/ansible-failed-to-set-permissions-on-the-temporary#comment116424403_56379678
+    - acl
+    # Python module pyghmi is required for Ansible's ipmi_* modules
+    - python-pyghmi
+    - python3-pyghmi
+
+- name: Update Ansible package to latest version from Debian Backports # noqa 403
+  apt:
+    name: ansible
+    state: latest
+    default_release: buster-backports
+
+- name: Install Python modules for Ansible
+  pip:
+    name:
+    # Python module zabbix-api is required for Ansible's zabbix_* modules
+    - zabbix-api
+    executable: '{{ item }}'
+  # Install packages for Python 2 and 3, because Ansible might be executed with both interpreters
+  loop:
+  - pip2
+  - pip3
