@@ -46,7 +46,7 @@ You can also include it in a `requirements.yml` file and install it via
 ---
 collections:
   - name: jm1.packages
-    version: 2021.9.17
+    version: 2021.10.7
 ```
 
 ## Usage and Playbooks
