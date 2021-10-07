@@ -5,7 +5,7 @@
 
 - name: Fetch apt repositories info for Debian Backports, i.e. apt_repositories_debian_10.buster_backports
   import_role:
-    name: jm1.apt_repositories
+    name: jm1.pkg.apt_repositories
 
 - name: Add apt repository of Debian Backports
   ansible.builtin.apt_repository: '{{ apt_repositories_debian_10.buster_backports.deb }}'

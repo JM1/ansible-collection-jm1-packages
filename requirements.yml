@@ -1,7 +1,6 @@
 ---
 roles:
 - jm1.common
-- jm1.apt_repositories
 
 collections:
 - jm1.libvirt
