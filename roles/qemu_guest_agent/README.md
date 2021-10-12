@@ -27,17 +27,16 @@ None.
 
 | Name            | Description                                                                         |
 | --------------- | ----------------------------------------------------------------------------------- |
-| `jm1.common`    | Provides `distribution_id` fact which is used to choose OS-specific defaults        |
 | `jm1.pkg.setup` | Installs necessary software for module `jm1.pkg.meta_pkg` from collection `jm1.pkg` |
 
 ## Example Playbook
 
-```
+```yml
 - hosts: all
-  tasks:
-    - name: Install QEMU Guest Agent
-      import_role:
-        name: jm1.packages.qemu_guest_agent
+  roles:
+  - name: Install QEMU Guest Agent
+    role: jm1.packages.qemu_guest_agent
+    tags: ["jm1.packages.qemu_guest_agent"]
 ```
 
 For instructions on how to run Ansible playbooks have look at Ansible's

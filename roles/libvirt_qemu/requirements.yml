@@ -3,5 +3,4 @@ roles: []
 
 collections:
 - jm1.libvirt
-- jm1.openstack
 - jm1.pkg
