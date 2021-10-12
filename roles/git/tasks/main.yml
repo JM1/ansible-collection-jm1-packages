@@ -10,4 +10,3 @@
 
 - name: Load tasks specific to OS (fails if OS is unsupported)
   include_tasks: "setup-{{ distribution_id|first }}.yml"
-
