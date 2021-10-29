@@ -35,6 +35,7 @@ using the provided [`requirements.yml`](https://github.com/JM1/ansible-collectio
 
 ```yml
 - hosts: all
+  become: yes
   roles:
   - name: Install Git client
     role: jm1.packages.git

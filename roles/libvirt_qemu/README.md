@@ -35,6 +35,7 @@ using the provided [`requirements.yml`](https://github.com/JM1/ansible-collectio
 
 ```yml
 - hosts: all
+  become: yes
   roles:
   - name: Install libvirt daemon, clients, tools and libraries to manage KVM/QEMU virtual machines
     role: jm1.packages.libvirt_qemu

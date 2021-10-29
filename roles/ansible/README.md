@@ -33,6 +33,7 @@ using the provided [`requirements.yml`](https://github.com/JM1/ansible-collectio
 
 ```yml
 - hosts: all
+  become: yes
   roles:
   - name: Install Ansible with support for collections and required tools and libraries e.g. for Ansible modules
     role: jm1.packages.ansible

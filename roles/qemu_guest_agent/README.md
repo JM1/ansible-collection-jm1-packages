@@ -33,6 +33,7 @@ None.
 
 ```yml
 - hosts: all
+  become: yes
   roles:
   - name: Install QEMU Guest Agent
     role: jm1.packages.qemu_guest_agent
