@@ -9,12 +9,14 @@
   when: distribution_id|last in ['7', '8']
   jm1.pkg.meta_pkg:
     name: "jm1-packages-libvirt-qemu"
-    version: "1"
+    version: "2"
     depends:
     - jm1-libvirt-setup
+    - libguestfs
     - libvirt-client
     - libvirt-daemon
-    - libvirt-daemon-driver-storage-rbd
+    - libvirt-daemon-config-network
+    - libvirt-daemon-kvm
     - virt-install
     - virt-top
     - qemu-kvm
