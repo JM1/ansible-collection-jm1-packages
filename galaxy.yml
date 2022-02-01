@@ -1,7 +1,10 @@
 ---
 authors:
   - Jakob Meng (https://github.com/jm1)
-dependencies: {}
+dependencies:
+  "jm1.libvirt": '>=2022.2.1'
+  "jm1.pkg": '>=2022.2.1'
+  "jm1.openstack": '>=2022.2.1'
 description: null
 documentation: https://github.com/jm1/ansible-collection-jm1-packages/tree/master/docs
 homepage: https://github.com/jm1/ansible-collection-jm1-packages
@@ -13,4 +16,4 @@ namespace: jm1
 readme: README.md
 repository: https://github.com/jm1/ansible-collection-jm1-packages
 tags: null
-version: 2021.10.12
+version: 2022.2.1
