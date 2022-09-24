@@ -22,7 +22,7 @@
     - python3-pyghmi
 
 - name: Install Python modules for Ansible
-  pip:
+  ansible.builtin.pip:
     name:
     # Python module zabbix-api is required for Ansible's zabbix_* modules
     - zabbix-api
