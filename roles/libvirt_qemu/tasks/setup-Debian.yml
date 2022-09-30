@@ -19,7 +19,7 @@
         ]
   jm1.pkg.meta_pkg:
     name: "jm1-packages-libvirt-qemu"
-    version: "1"
+    version: "2"
     depends:
     - jm1-libvirt-setup
     - libvirt-clients
@@ -27,7 +27,6 @@
     - libvirt-daemon-system
     - libvirt-daemon-driver-storage-rbd
     - virtinst
-    - virt-top
     - qemu
     conflicts:
     - qemu-system-gui # Do not install qemu-system-gui, because this will pull in a lot of desktop related packages.
