@@ -1,6 +1,6 @@
 # Ansible Collection for Software Deployments
 
-This repo hosts the [`jm1.packages`](https://galaxy.ansible.com/jm1/packages) Ansible Collection.
+This repo hosts the Ansible collection [`jm1.packages`](https://galaxy.ansible.com/jm1/packages).
 
 The collection includes a variety of Ansible content to help with software deployments.
 
@@ -9,10 +9,10 @@ The collection includes a variety of Ansible content to help with software deplo
 Click on the name of a module or role to view that content's documentation:
 
 - **Roles**:
-    * [ansible](https://github.com/JM1/ansible-collection-jm1-packages/blob/master/roles/ansible/README.md)
-    * [git](https://github.com/JM1/ansible-collection-jm1-packages/blob/master/roles/git/README.md)
-    * [libvirt_qemu](https://github.com/JM1/ansible-collection-jm1-packages/blob/master/roles/libvirt_qemu/README.md)
-    * [qemu_guest_agent](https://github.com/JM1/ansible-collection-jm1-packages/blob/master/roles/qemu_guest_agent/README.md)
+    * [ansible](roles/ansible/README.md)
+    * [git](roles/git/README.md)
+    * [libvirt_qemu](roles/libvirt_qemu/README.md)
+    * [qemu_guest_agent](roles/qemu_guest_agent/README.md)
 
 ## Requirements and Installation
 
@@ -101,13 +101,13 @@ Helpful tools for developing collections are `ansible`, `ansible-doc`, `ansible-
 | Debian 11 (Bullseye)                         | `apt install ansible ansible-lint flake8 make yamllint` |
 | Debian 12 (Bookworm)                         | `apt install ansible ansible-lint flake8 make yamllint` |
 | Red Hat Enterprise Linux (RHEL) 7 / CentOS 7 | Enable [EPEL](https://fedoraproject.org/wiki/EPEL). `yum install ansible ansible-lint ansible-doc  python-flake8 make yamllint` |
-| Red Hat Enterprise Linux (RHEL) 8 / CentOS 8 | Enable [EPEL](https://fedoraproject.org/wiki/EPEL). `yum install ansible                           python3-flake8 make yamllint` |
-| Red Hat Enterprise Linux (RHEL) 9 / CentOS 9 | Enable [EPEL](https://fedoraproject.org/wiki/EPEL). `yum install ansible                           python3-flake8 make yamllint` |
+| Red Hat Enterprise Linux (RHEL) 8 / CentOS 8 | Enable [EPEL](https://fedoraproject.org/wiki/EPEL). `yum install ansible                          python3-flake8 make yamllint` |
+| Red Hat Enterprise Linux (RHEL) 9 / CentOS 9 | Enable [EPEL](https://fedoraproject.org/wiki/EPEL). `yum install ansible                          python3-flake8 make yamllint` |
 | Ubuntu 18.04 LTS (Bionic Beaver)             | Enable [Launchpad PPA Ansible by Ansible, Inc.](https://launchpad.net/~ansible/+archive/ubuntu/ansible). `apt install ansible ansible-doc ansible-lint flake8 make yamllint` |
 | Ubuntu 20.04 LTS (Focal Fossa)               | `apt install ansible ansible-doc ansible-lint flake8 make yamllint` |
 | Ubuntu 22.04 LTS (Jammy Jellyfish)           | `apt install ansible             ansible-lint flake8 make yamllint` |
 
-Have a look at the included [`Makefile`](https://github.com/JM1/ansible-collection-jm1-packages/blob/master/Makefile) for
+Have a look at the included [`Makefile`](Makefile) for
 several frequently used commands, to e.g. build and lint a collection.
 
 ## More Information
