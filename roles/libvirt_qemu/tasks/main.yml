@@ -15,4 +15,4 @@
                             # dependencies.
 
 - name: Load tasks specific to OS (fails if OS is unsupported)
-  ansible.builtin.include_tasks: "setup-{{ distribution_id|first }}.yml"
+  ansible.builtin.include_tasks: "setup-{{ distribution_id | first }}.yml"
