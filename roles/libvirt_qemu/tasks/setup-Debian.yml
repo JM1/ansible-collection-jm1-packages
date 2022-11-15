@@ -17,7 +17,7 @@
                             ['Ubuntu', '22.04']]
   jm1.pkg.meta_pkg:
     name: "jm1-packages-libvirt-qemu"
-    version: "2"
+    version: "3"
     depends:
     - jm1-libvirt-setup
     - libvirt-clients
@@ -25,6 +25,6 @@
     - libvirt-daemon-system
     - libvirt-daemon-driver-storage-rbd
     - virtinst
-    - qemu
+    - qemu-kvm
     conflicts:
     - qemu-system-gui # Do not install qemu-system-gui, because this will pull in a lot of desktop related packages.
