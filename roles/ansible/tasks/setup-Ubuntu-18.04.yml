@@ -72,7 +72,7 @@
 - name: Install Python modules for Ansible
   ansible.builtin.pip:
     name:
-    # Pyhton module zabbix-api is required for Ansible's zabbix_* modules
+    # Python module zabbix-api is required for Ansible's zabbix_* modules
     - zabbix-api
     executable: '{{ item }}'
   # Install packages for Python 2 and 3, because Ansible might be executed with both interpreters
