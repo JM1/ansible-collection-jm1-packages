@@ -2,9 +2,9 @@
 authors:
   - Jakob Meng (https://github.com/jm1)
 dependencies:
-  "jm1.libvirt": '>=2022.9.24'
-  "jm1.pkg": '>=2022.9.25'
-  "jm1.openstack": '>=2022.9.24'
+  "jm1.libvirt": '>=2022.12.10'
+  "jm1.pkg": '>=2022.12.10'
+  "jm1.openstack": '>=2022.12.10'
 description: null
 documentation: https://github.com/jm1/ansible-collection-jm1-packages/tree/master/docs
 homepage: https://github.com/jm1/ansible-collection-jm1-packages
