@@ -31,7 +31,7 @@
     - python-pyghmi
     - python3-pyghmi
 
-- name: Update Ansible package to latest version from Debian Backports # noqa 403
+- name: Update Ansible package to latest version from Debian Backports # noqa package-latest
   ansible.builtin.apt:
     name: ansible
     state: latest
