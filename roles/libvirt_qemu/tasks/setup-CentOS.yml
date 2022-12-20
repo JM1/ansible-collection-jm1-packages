@@ -10,7 +10,7 @@
     yum_repository_config: '{{ yum_repository_config_epel }}'
 
 - name: Install libvirt daemon, clients, tools and libraries to manage KVM/QEMU virtual machines
-  when: distribution_id | last in ['7', '8']
+  when: distribution_id | last in ['7', '8', '9']
   jm1.pkg.meta_pkg:
     name: "jm1-packages-libvirt-qemu"
     version: "3"
