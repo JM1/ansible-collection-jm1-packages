@@ -26,7 +26,7 @@ using the provided [`requirements.yml`](https://github.com/JM1/ansible-collectio
 
 | Name               | Default value                           | Required | Description                                                                                               |
 | ------------------ | --------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------- |
-| `distribution_id`  | *depends on operating system*           | no       | List which uniquely identifies a distribution release, e.g. `[ 'Debian', '10' ]` for `Debian 10 (Buster)` |
+| `distribution_id`  | *depends on operating system*           | false    | List which uniquely identifies a distribution release, e.g. `[ 'Debian', '10' ]` for `Debian 10 (Buster)` |
 
 ## Dependencies
 
@@ -38,7 +38,7 @@ using the provided [`requirements.yml`](https://github.com/JM1/ansible-collectio
 
 ```yml
 - hosts: all
-  become: yes
+  become: true
   roles:
   - name: Install Git client
     role: jm1.packages.git
