@@ -64,13 +64,3 @@
     - acl
     # Python module pyghmi is required for Ansible's ipmi_* modules
     - python3-pyghmi
-
-- name: Install Python modules for Ansible
-  ansible.builtin.pip:
-    name:
-    # Python module zabbix-api is required for Ansible's zabbix_* modules
-    - zabbix-api
-    executable: '{{ item }}'
-  # Install packages for Python 3 only, because Python 2 is EOL
-  loop:
-  - pip3
