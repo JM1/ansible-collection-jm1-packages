@@ -8,5 +8,9 @@
     name: jm1.pkg.setup # If Ansible raises "ERROR! the role 'jm1.pkg.setup' was not found" then you might use the
                         # ansible-galaxy and the provided requirements.yml to install all missing role dependencies.
 
-- name: Load tasks specific to OS (fails if OS is unsupported)
-  ansible.builtin.include_tasks: "setup-{{ distribution_id | first }}.yml"
+- name: Install Git
+  jm1.pkg.meta_pkg:
+    name: "jm1-packages-git"
+    version: "1"
+    depends:
+    - git

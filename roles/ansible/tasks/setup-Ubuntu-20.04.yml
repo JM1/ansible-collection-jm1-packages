@@ -39,8 +39,8 @@
     # error message "gpg: keyserver receive failed: Server indicated a failure". This bug might be related to
     # https://dev.gnupg.org/T2889 or https://bbs.archlinux.org/viewtopic.php?id=259473
     #
-    #id: 93C4A3FD7BB9C367
-    #keyserver: keyserver.ubuntu.com
+    # id: 93C4A3FD7BB9C367
+    # keyserver: keyserver.ubuntu.com
 
 - name: Add apt repository of Launchpad PPA Ansible by Ansible, Inc.
   ansible.builtin.apt_repository:

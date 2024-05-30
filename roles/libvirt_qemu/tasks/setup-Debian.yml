@@ -6,15 +6,6 @@
 # Tasks for Debian and Ubuntu have been unified in a single file because of similarities between both distributions.
 
 - name: Install libvirt daemon, clients, tools and libraries to manage KVM/QEMU virtual machines
-  when: distribution_id in [['Debian', '10'],
-                            ['Debian', '11'],
-                            ['Debian', '12'],
-                            ['Debian', 'NA'],
-                            ['Debian', 'Testing'],
-                            ['Debian', 'Unstable'],
-                            ['Ubuntu', '18.04'],
-                            ['Ubuntu', '20.04'],
-                            ['Ubuntu', '22.04']]
   jm1.pkg.meta_pkg:
     name: "jm1-packages-libvirt-qemu"
     version: "3"
