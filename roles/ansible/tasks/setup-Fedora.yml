@@ -8,7 +8,7 @@
     name: "jm1-packages-ansible"
     version: "1"
     depends:
-    - ansible (>= 2.9.0)
+    - ansible
     # pip is required for Ansible's pip module
     - python3-pip
     # Python module netaddr is required for Ansible's ipaddr filter
